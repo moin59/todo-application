@@ -1,0 +1,30 @@
+Greeting Controller:
+====================
+curl -i http://localhost:8080/v1/todos
+
+
+CREATE TODO:
+==============
+curl -i \
+-d '{"name":"First todo", "description": "Test todo"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8080/v1/todos
+
+
+GET TODO:
+==============
+curl -i http://localhost:8080/v1/todos
+
+
+UPDATE TODO:
+==============
+curl -i \
+-d '{"name":"Second todo", "description": "New todo"}' \
+-H "Content-Type: application/json" \
+-X PUT http://localhost:8080/v1/todos/6b463c40-26bc-4ab6-ac87-5d6e3e3ed948
+
+
+DELETE TODO:
+==============
+curl -i -X DELETE http://localhost:8080/v1/todos/6b463c40-26bc-4ab6-ac87-5d6e3e3ed948
+
